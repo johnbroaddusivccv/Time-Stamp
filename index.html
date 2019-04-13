@@ -19,6 +19,7 @@
     <title>Employee Time Sheet</title>
 </head>
 <body>
+
     <header><h1>Employee Time Sheet</h1></header>
     <h3>Employee Time Sheet</h3>
     <div class="container">
@@ -73,6 +74,65 @@
     </div>
 
     </form></div>
+
+        <header><h1>Employee Time Sheet</h1></header>
+        <h3>Employee Time Sheet</h3>
+        <div class="container"><table class="table">
+          <thead>
+            <tr>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Role</th>
+				<th scope="col">Start Date</th>
+				<th scope="col">Months Worked</th>
+        <th scope="col">Monthly Rate</th>
+				<th scope="col">Total Billed</th>
+            </tr>
+          </thead>
+          <tbody id="tableAppend">
+            
+            <tr>
+
+    
+            </tr>
+          </tbody>
+        </table>
+                </div>
+                <div class="container"><form>
+                 
+                  <div class="form-group">
+                    <label for="inputName"><h6>Employee Name</h6></label>
+                    <input type="text" class="form-control" id="name-input" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputRole"><h6>Role</h6></label>
+                    <input type="text" class="form-control" id="destination-input" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputDate"><h6>Start Date</h6></label>
+                    <input type="text" class="form-control" id="ftt-input" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputMonths"><h>Months Worked</h6></label>
+                    <input type="text" class="form-control" id="frequency-input" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputSalary"><h>Monthly Salary</h6></label>
+                    <input type="text" class="form-control" id="frequency-input" placeholder="">
+                  </div>
+
+                  <div class="form-group col-md-2"><button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+    
+                    
+
+                  
+                  <div class="form-group col-md-2"><button type="submit" class="btn btn-primary">Submit</button>
+
+                    </div>
+                  </div>
+                  
+                </form></div>
+    
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>

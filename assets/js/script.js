@@ -28,6 +28,7 @@ $("#submitBtn").on("click", function () {
 
     console.log(eName);
 
+
     database.ref().set({
         Employee: eName,
         Role: eRole,
@@ -37,3 +38,14 @@ $("#submitBtn").on("click", function () {
         TotalBilled: eTotalBilled
     })
 })
+
+  database.ref().set({
+
+      Employee: eName,
+      Role: eRole,
+      Date: eStartDate,
+      MonthsWorked: eMonthsWorked,
+      MonthlyRate: eMonthlyRate,
+      TotalBilled: eTotalBilled
+  })
+
