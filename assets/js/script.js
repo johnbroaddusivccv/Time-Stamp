@@ -1,30 +1,26 @@
-var config = {
-    apiKey: "AIzaSyCVGbHah9ZOba-AuUk1KZxnlLmvjBjJtgk",
-    authDomain: "forclass-4f95c.firebaseapp.com",
-    databaseURL: "https://forclass-4f95c.firebaseio.com",
-    projectId: "forclass-4f95c",
-    storageBucket: "forclass-4f95c.appspot.com",
-    messagingSenderId: "895419474223"
-  };
-  
-  firebase.initializeApp(config);
-  
-  // Create a variable to reference the database.
-  var database = firebase.database();
 
 
-  var eName = "";
-  var eRole = "";
-  var eStartDate = "";
-  var eMonthsWorked = 0;
-  var eMonthlyRate = 0;
-  var eTotalBilled = 0;
+function monthGetter( date) {
+    
+    var datearr = date.split('/');
+console.log(datearr);
+  var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+var yyyy = today.getFullYear();
 
-  database.ref().set({
-      Employee: eName,
-      Role: eRole,
-      Date: eStartDate,
-      MonthsWorked: eMonthsWorked,
-      MonthlyRate: eMonthlyRate,
-      TotalBilled: eTotalBilled
-  })
+
+parseInt(datearr[0]);
+parseInt(datearr[2]);
+parseInt(mm);
+parseInt(yyyy);
+console.log(yyyy);
+console.log(datearr[2])
+console.log(mm)
+console.log(datearr[0]);
+console.log(yyyy-datearr[2]*12);
+console.log(mm -datearr[0]);
+ var monthDifference=(yyyy-datearr[2]*12)+ ( mm - datearr[0]);
+ console.log(monthDifference);
+}
+monthGetter(date);
