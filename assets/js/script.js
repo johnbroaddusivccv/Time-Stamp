@@ -20,6 +20,8 @@ var config = {
   var eMonthlyRate = 0;
   var eTotalBilled = 0;
 
+
+
   database.ref.set({
       Employee: eName,
       Role: eRole,
