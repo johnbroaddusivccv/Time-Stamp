@@ -43,6 +43,8 @@ $("#submitBtn").on("click", function () {
 
 
 
+
+
     database.ref().set({
         Employee: eName,
         Role: eRole,
@@ -51,5 +53,5 @@ $("#submitBtn").on("click", function () {
         MonthlyRate: eMonthlyRate,
         TotalBilled: eTotalBilled
     })
-
+});
 
