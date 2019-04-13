@@ -20,6 +20,38 @@ var config = {
   var eMonthlyRate = 0;
   var eTotalBilled = 0;
 
+  function addRow (){
+    return `
+    <tr>
+    <th scope="row">${eName}</th>
+    <td>${eRole}</td>
+    <td>${eStartDate}</td>
+    <td>${eMonthsWorked}</td>
+    <td>${eMonthlyRate}</td>
+    <td>${eTotalBilled}</td>
+    </tr>
+    `  
+
+  }
+  var date="09/11/1995";
+ 
+  function monthGetter( date) {
+    var datearr = date.split('/');
+ console.log(datearr);
+  var today = new Date();
+ var dd = String(today.getDate()).padStart(2, '0');
+ var mm = String(today.getMonth() + 1).padStart(2, '0');
+ var yyyy = today.getFullYear();
+ parseInt(datearr[0]);
+ parseInt(datearr[2]);
+ parseInt(mm);
+ parseInt(yyyy);
+ var monthDifference=(yyyy-datearr[2])*12+ ( mm - datearr[0]);
+ console.log(monthDifference);
+ }
+ 
+
+
 
 database.ref().set({
 
@@ -43,10 +75,6 @@ $(document).on("click", 'button', function () {
   
 
 
-
-
-
-
     database.ref().push({
         Employee: eName,
         Role: eRole,
@@ -54,6 +82,10 @@ $(document).on("click", 'button', function () {
         MonthsWorked: eMonthsWorked,
         MonthlyRate: eMonthlyRate,
         TotalBilled: eTotalBilled
-    })
+
+
+})
 });
+
+
 
