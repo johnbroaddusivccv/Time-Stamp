@@ -73,7 +73,7 @@ $(document).on("click", 'button', function () {
     eStartDate = $("#ftt-input").val().trim();
     eMonthlyRate = $("#frequency-input").val();
     eMonthsWorked = monthGetter(eStartDate)
-    eTotalBilled = 
+    eTotalBilled = eMonthsWorked * parseInt(eMonthlyRate);
     
 
     $("tbody").append(addRow());
