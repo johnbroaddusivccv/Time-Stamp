@@ -20,6 +20,7 @@ var config = {
   var eMonthlyRate = 0;
   var eTotalBilled = 0;
 
+
 database.ref().set({
 
     Employee: eName,
@@ -39,7 +40,7 @@ $("#submitBtn").on("click", function () {
     eStartDate = $("#ftt-input").val().trim();
     eMonthlyRate = $("#frequency-input").val();
 
-    console.log(eName);
+
 
 
     database.ref().set({
@@ -50,6 +51,5 @@ $("#submitBtn").on("click", function () {
         MonthlyRate: eMonthlyRate,
         TotalBilled: eTotalBilled
     })
-})
 
 
