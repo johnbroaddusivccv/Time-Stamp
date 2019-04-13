@@ -31,12 +31,13 @@ var config = {
     <td>${eTotalBilled}</td>
     </tr>
     `  
+    
 
   }
-  var date="09/11/1995";
+  
  
-  function monthGetter( date) {
-    var datearr = date.split('/');
+  function monthGetter( eStartDate) {
+    var datearr = eStartDate.split('/');
  console.log(datearr);
   var today = new Date();
  var dd = String(today.getDate()).padStart(2, '0');
@@ -46,8 +47,8 @@ var config = {
  parseInt(datearr[2]);
  parseInt(mm);
  parseInt(yyyy);
- var monthDifference=(yyyy-datearr[2])*12+ ( mm - datearr[0]);
- console.log(monthDifference);
+ return (yyyy-datearr[2])*12+ ( mm - datearr[0]);
+
  }
  
 
@@ -71,6 +72,11 @@ $(document).on("click", 'button', function () {
     eRole = $("#destination-input").val().trim();
     eStartDate = $("#ftt-input").val().trim();
     eMonthlyRate = $("#frequency-input").val();
+    eMonthsWorked = monthGetter(eStartDate)
+    eTotalBilled = 
+    
+
+    $("tbody").append(addRow());
 
   
 
@@ -85,6 +91,7 @@ $(document).on("click", 'button', function () {
 
 
 })
+
 });
 
 
