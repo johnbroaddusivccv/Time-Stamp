@@ -28,7 +28,7 @@ $("#submitBtn").on("click", function () {
 
     console.log(eName);
 
-    database.ref.set({
+    database.ref().set({
         Employee: eName,
         Role: eRole,
         Date: eStartDate,
