@@ -11,3 +11,20 @@ var config = {
   
   // Create a variable to reference the database.
   var database = firebase.database();
+
+
+  var eName = "";
+  var eRole = "";
+  var eStartDate = "";
+  var eMonthsWorked = 0;
+  var eMonthlyRate = 0;
+  var eTotalBilled = 0;
+
+  database.ref.set({
+      Employee: eName,
+      Role: eRole,
+      Date: eStartDate,
+      MonthsWorked: eMonthsWorked,
+      MonthlyRate: eMonthlyRate,
+      TotalBilled: eTotalBilled
+  })
