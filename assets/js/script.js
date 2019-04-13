@@ -32,7 +32,7 @@ database.ref().set({
 })
 
 
-$("#submitBtn").on("click", function () {
+$(document).on("click", 'button', function () {
     event.preventDefault();
 
     eName = $("#name-input").val().trim();
@@ -40,12 +40,14 @@ $("#submitBtn").on("click", function () {
     eStartDate = $("#ftt-input").val().trim();
     eMonthlyRate = $("#frequency-input").val();
 
+  
 
 
 
 
 
-    database.ref().set({
+
+    database.ref().push({
         Employee: eName,
         Role: eRole,
         Date: eStartDate,
