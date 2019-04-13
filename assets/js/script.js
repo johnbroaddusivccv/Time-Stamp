@@ -22,7 +22,8 @@ var config = {
 
 
 
-  database.ref.set({
+  database.ref().set({
+
       Employee: eName,
       Role: eRole,
       Date: eStartDate,
