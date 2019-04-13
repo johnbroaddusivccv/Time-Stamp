@@ -81,8 +81,11 @@ $(document).on("click", 'button', function () {
         Date: eStartDate,
         MonthsWorked: eMonthsWorked,
         MonthlyRate: eMonthlyRate,
-        TotalBilled: eTotalBilled,
+        TotalBilled: eTotalBilled
 
 
+})
 });
+
+
 
