@@ -21,6 +21,26 @@ var config = {
   var eTotalBilled = 0;
 
 
+database.ref().set({
+
+    Employee: eName,
+    Role: eRole,
+    Date: eStartDate,
+    MonthsWorked: eMonthsWorked,
+    MonthlyRate: eMonthlyRate,
+    TotalBilled: eTotalBilled
+})
+
+
+$("#submitBtn").on("click", function () {
+    event.preventDefault();
+
+    eName = $("#name-input").val().trim();
+    eRole = $("#destination-input").val().trim();
+    eStartDate = $("#ftt-input").val().trim();
+    eMonthlyRate = $("#frequency-input").val();
+
+
 
 
     database.ref().set({
@@ -32,13 +52,4 @@ var config = {
         TotalBilled: eTotalBilled
     })
 
-$("#submitBtn").on("click", function () {
-  event.preventDefault();
-    eName = $("#name-input").val().trim();
-    eRole = $("#destination-input").val().trim();
-    eStartDate = $("#ftt-input").val().trim();
-    eMonthlyRate = $("frequency-input").val().trim();
-  console.log(eName);
-  });
-    
 
